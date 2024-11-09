@@ -1,8 +1,7 @@
 ---
-layout: page
-title: "About me"
-permalink: /about/
-This is about page!
+layout: default
+title: Home page
+description: Home page description
 ---
 
 # pawan.github.io
