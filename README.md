@@ -1,7 +1,5 @@
 ---
 layout: default
-title: Home page
-description: Home page description
 ---
 
 # pawan.github.io
