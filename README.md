@@ -1,3 +1,10 @@
+---
+layout: page
+title: "About me"
+permalink: /about/
+This is about page!
+---
+
 # pawan.github.io
 ## Pawan
 <h1>Hi there 👋 I am Pawan</h1>

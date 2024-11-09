@@ -1,4 +1,11 @@
-layout: page
-title: "About me"
-permalink: /about/
-This is about page!
+---
+layout: default
+title: Another page
+description: This is just another page
+---
+
+## Welcome to another page
+
+_yay_
+
+[back](./)
