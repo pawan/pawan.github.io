@@ -1,4 +1,7 @@
-# pawan.github.io
+---
+layout: default
+---
+
 <h1>Hi there 👋 I am Pawan</h1>
 
 🔭 Experienced Magento Developer with 8+ years experience from 🇮🇳
