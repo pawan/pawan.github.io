@@ -44,9 +44,9 @@ export default function HomePage() {
         Open Popup
       </button>
 
-      <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+      <Modal isOpen={isModalOpen} onClose={handleCloseModal} onSubmit={handleSubmit}>
         <h2 className="text-xl font-semibold mb-4">Enter Information</h2>
-        <form onSubmit={handleSubmit}>
+        <form>
           <div className="mb-4">
             <label htmlFor="inputField" className="block text-gray-700 text-sm font-bold mb-2">
               Your Input:
