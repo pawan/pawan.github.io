@@ -28,3 +28,16 @@ export default async function BlogPostPage({
 function Heading() {
   return <h2>Post Heading from funcation!</h2>;
 }
+
+export async function generateStaticParams() {
+  // Replace with your actual data source
+  const posts = [
+    { slug: 'first-post' },
+    { slug: 'second-post' },
+    // ...add all slugs you want to export
+  ];
+
+  return posts.map(post => ({
+    slug: post.slug,
+  }));
+}
