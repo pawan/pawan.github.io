@@ -1,4 +1,5 @@
 //import Link from 'next/link'
+import type { ReactNode } from 'react';
 import Header from '@/components/Header';
 import Footer from '../components/Footer';
 import './globals.css'; // Import global styles if you have them
@@ -15,12 +16,12 @@ const inter = Inter({
   display: 'swap',
 })
 
-export const roboto_mono = Roboto_Mono({
+const roboto_mono = Roboto_Mono({
   subsets: ['latin'],
   display: 'swap',
 })
  
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
       return (
         <html lang="en" className={roboto_mono.className}>
           <body>
