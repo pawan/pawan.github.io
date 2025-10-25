@@ -34,6 +34,7 @@ export async function generateStaticParams() {
   const posts = [
     { slug: 'first-post' },
     { slug: 'second-post' },
+    { slug: 'third-post' },
     // ...add all slugs you want to export
   ];
 

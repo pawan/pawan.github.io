@@ -15,9 +15,9 @@
     export async function getPostFromDbById(slug) {
       // Simulate fetching users from a database
 console.log(slug)
-      
-  
-      const post = posts.find(p => p.id === Number(slug)) ?? {title: `No post found with id ${slug}!`};
-  
+
+
+      const post = posts.find(p => p.slug === slug) ?? {title: `No post found with id ${slug}!`};
+
       return post;
     }

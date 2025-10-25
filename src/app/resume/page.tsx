@@ -23,7 +23,7 @@ export default function HomePage() {
     e.preventDefault();
     console.log('Submitted value:', inputValue);
     // You can send this data to an API or perform other actions
-    if(inputValue=='test'){
+    if(inputValue=='pawanp'){
     handleCloseModal();
     //setCookieForTwoMinutes('login', 'yes');
     }
@@ -46,7 +46,7 @@ export default function HomePage() {
 
       <Modal isOpen={isModalOpen} onClose={handleCloseModal} onSubmit={handleSubmit}>
         <h2 className="text-xl font-semibold mb-4">Enter Information</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label htmlFor="inputField" className="block text-gray-700 text-sm font-bold mb-2">
               Your Input:

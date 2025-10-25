@@ -13,6 +13,7 @@ const MyForm = () => {
 
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,6 +25,7 @@ const MyForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     setShowSuccess(false);
     setShowError(false);
     console.log('Form submitted:', formData);
@@ -55,12 +57,14 @@ const MyForm = () => {
       setShowError(true);
       console.error('Error submitting form:', error);
       // Handle error, e.g., show an error message
+    } finally {
+      setIsLoading(false);
     }
 
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
+    <div className="flex items-center justify-center bg-gray-100 p-4">
       <div className="w-full max-w-md">
       {showSuccess && (
           <div className="mb-4 p-4 rounded bg-green-100 text-green-800 font-semibold text-center">
@@ -141,10 +145,17 @@ const MyForm = () => {
         <div className="flex items-center justify-between">
           <button
             type="submit"
+            disabled={isLoading}
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
-            Submit
+            {isLoading ? 'Sending...' : 'Submit'}
           </button>
+          {isLoading && (
+            <div className="loader">
+              {/* Your loading spinner or animation */}
+              Loading...
+            </div>
+          )}
         </div>
       </form>
       </div>

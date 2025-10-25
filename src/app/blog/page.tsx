@@ -9,7 +9,7 @@ export default async function Page() {
   return (
     <div>
       {posts.map((post) => (
-        <a key={post.id} href={`/blog/${post.id}`}> {post.title} </a>
+        <a key={post.id} href={`/blog/${post.slug}`}> {post.title} </a>
       ))}
       </div>
   )

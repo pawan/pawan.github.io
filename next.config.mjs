@@ -1,10 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export', // Enables static HTML export
-  // Optional: Disable image optimization if not supported by your static host
-  images: {
-    unoptimized: true, 
-  },
   images: {
     remotePatterns: [
       {
@@ -12,6 +8,8 @@ const nextConfig = {
         hostname: 'images.unsplash.com',
       },
     ],
+    // Optional: Disable image optimization if not supported by your static host
+    unoptimized: true,
   },
 };
 
