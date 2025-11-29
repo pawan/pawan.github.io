@@ -6,6 +6,7 @@
         <header className="h-[10vh] justify-center items-center flex" style={{ background: '#eee', borderBottom: '1px solid #ccc' }}>
           <nav>
             <Link href="/">Home</Link>
+            <Link href="/learn" style={{ marginLeft: '10px' }}>Learn</Link>
             <Link href="/contact" style={{ marginLeft: '10px' }}>Contact!</Link>
             {/* <Link href="/blog" style={{ marginLeft: '10px' }}>Blog</Link>
             <Link href="/work" style={{ marginLeft: '10px' }}>Work</Link>

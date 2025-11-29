@@ -26,16 +26,11 @@ const MyForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    setShowSuccess(false);
-    setShowError(false);
-    console.log('Form submitted:', formData);
     // You can handle form submission logic here, e.g., send data to an API
     //alert('Form submitted! Check console for data.');
 
-    console.log(JSON.stringify(formData));
-
     try {
-      const response = await fetch('https://pawanlabs.com/api/login', {
+      const response = await fetch('https://dev.pawanlabs.com/api/contacts', {
         method: 'POST',
         headers: {
           'accept': 'application/ld+json',
@@ -50,7 +45,7 @@ const MyForm = () => {
       }
 
       const result = await response.json();
-      console.log('Success:', result);
+      console.log('form submission successful');
       setShowSuccess(true);
       // Handle success, e.g., show a success message, clear form
     } catch (error) {
@@ -80,7 +75,7 @@ const MyForm = () => {
       <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Contact Us</h2>
 
-        <input type='hidden' name='client_ip' value="1234" />
+        <input type='hidden' name='client_ip' value={formData.client_ip} />
 
         <div className="mb-4">
           <label htmlFor="name" className="block text-gray-700 text-sm font-semibold mb-2">
